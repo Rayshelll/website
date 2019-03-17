@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1.0, maximum-scale=1.0" />
+    <meta name="keywords" content="流浪动物领养，保护关爱流浪动物" />
+    <meta name="description" content="流浪动物领养" />
+    <title>流浪动物领养</title>
+    <!-- Bootstrap -->
+    <link href="stylesheets/bootstrap.min.css" rel="stylesheet">
+    <!--自定义CSS-->
+    <link href="stylesheets/style.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+
+    <style>
+        body {
+            padding-top: 50px;/*有顶部固定导航条时设置*/
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<nav class="navbar navbar-default navbar-fixed-top navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#example">
+                <span class="sr-only">Toggle Navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">流浪宠物之家</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="example">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="home.html">主页</a></li>
+                <li><a href="newsinfo.html">新闻动态</a></li>
+                <li><a href="petinfo.html">领养中心</a></li>
+                <li><a href="about.html">宠物百科</a></li>
+                <li><a href="aboutus.html">关于我们</a></li>
+                <li><a href="mangement.html">管理员界面</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a data-toggle="modal" data-target="#register" href=""><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+                <li><a data-toggle="modal" data-target="#login" href=""><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!--轮播图-->
+<div class="carousel slide" id="slidershow" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li class="active" data-target="#slidershow" data-slide-to="0"></li>
+        <li data-target="#slidershow" data-slide-to="1"></li>
+        <li data-target="#slidershow" data-slide-to="2"></li>
+        <li data-target="#slidershow" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="images/pic/1.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/pic/2.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/pic/3.jpg" alt="">
+        </div>
+        <div class="item">
+            <img src="images/pic/4.jpg" alt="">
+        </div>
+    </div>
+    <a class="left carousel-control" data-slide="prev" href="#slidershow"><span class="glyphicon glyphicon-chevron-left"></span><span class="sr-only">previous</span></a>
+    <a class="right carousel-control" data-slide="next" href="#slidershow"><span class="glyphicon glyphicon-chevron-right"></span><span class="sr-only">next</span></a>
+</div>
+<!--栅格布局-->
+<div class="container" id="sum-container">
+    <div class="row">
+        <div class="col-xs-12 col-md-4">
+            <img class="img-circle" src="images/g3.jpg" alt="">
+            <h4>AA</h4>
+            <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+            <p><a class="btn btn-primary" target="_blank" href="#">领养申请</a> </p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <img class="img-circle" src="images/g3.jpg" alt="">
+            <h4>BB</h4>
+            <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+            <p><a class="btn btn-primary" target="_blank" href="#">领养申请</a> </p>
+        </div>
+        <div class="col-xs-12 col-md-4">
+            <img class="img-circle" src="images/g3.jpg" alt="">
+            <h4>CC</h4>
+            <p>Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器。</p>
+            <p><a class="btn btn-primary" target="_blank" href="#">领养申请</a> </p>
+        </div>
+    </div>
+    <hr class="divider">
+</div>
+<!--标签页-->
+<div class="container">
+    <ul class="nav nav-tabs" role="tablist" id="tab-list">
+        <li class="active">
+            <a href="#newinfo" role="tab" data-toggle="tab">新闻动态</a>
+        </li>
+        <li>
+            <a href="#lostinfo" role="tab" data-toggle="tab">走失公告</a>
+        </li>
+        <li>
+            <a href="#tipinfo" role="tab" data-toggle="tab">最新领养</a>
+        </li>
+        <li>
+            <a href="#adoptinfo" role="tab" data-toggle="tab">养宠物小知识</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="tab-pane active" id="newinfo">
+            <div class="row feature">
+                <div class="col-md-3">
+                    <img class="feature-image img-responsive" src="images/2.jpg" alt="new">
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="list-unstyled"><a class="tlink" href="#">wrerrrtthyttfgfg</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="lostinfo">
+            <div class="row feature">
+                <div class="col-md-3">
+                    <img class="feature-image img-responsive" src="images/2.jpg" alt="lost">
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="list-unstyled"><a href="#">wrerrrtthyttfgfg</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="tab-pane" id="tipinfo">
+            <div class="row feature">
+                <div class="col-md-3">
+                    <img class="feature-image img-responsive" src="images/2.jpg" alt="tip">
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="list-unstyled"><a href="#">wrerrrtthyttfgfg</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+        <div class="tab-pane" id="adoptinfo">
+            <div class="row feature">
+                <div class="col-md-3">
+                    <img class="feature-image img-responsive" src="images/2.jpg" alt="adopt">
+                </div>
+                <div class="col-md-9">
+                    <ul>
+                        <li class="list-unstyled"><a href="#">wrerrrtthyttfgfg</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <!--脚部-->
+    <div class="row" id="parts">
+        <div class="col-md-6 col-xs-12">
+            <span>合作伙伴</span>
+            <div class="partners">
+                <div class="partnersimg"><a href="http://www.hao123.com/" target="_blank"><img width="129" height="54" src="images/pic/logo.jpg" alt="hao123上网导航" /></a></div>
+                <div class="partnersimg"><a href="http://www.goumin.com/" target="_blank"><img src="images/pic/link_logo2.jpg" alt=""></a></div>
+                <div class="partnersimg"><a href="http://www.aigou.com/" target="_blank"><img src="images/pic/link_logo3.jpg" alt=""></a></div>
+                <div class="partnersimg"><a href="http://www.mypethome.com/" target="_blank"><img src="images/pic/link_logo4.jpg" alt=""></a></div>
+                <div class="partnersimg"><a href="http://www.chinapet.com/" target="_blank"><img src="images/pic/link_logo5.jpg" alt=""></a></div>
+                <div class="partnersimg"><a href="http://www.ttpet.com/" target="_blank"><img src="images/pic/link_logo6.jpg" alt=""></a></div>
+                <div class="partnersimg"><a href="http://www.ichong123.com/" target="_blank"><img src="images/pic/link_logo7.jpg" alt=""></a></div>
+                <div class="partnersimg"><a href="http://www.ganji.com/" target="_blank"><img src="images/pic/link_logo8.jpg" alt=""></a></div>
+            </div>
+        </div>
+        <div class="col-md-6 col-xs-12">
+            <span>友情链接</span>
+            <div class="links">
+                <ul class="linklist">
+                    <li><a href="http://www.fang.eu" target="_blank" class="url_main">房易优</a></li>
+                    <li><a href="http://www.lianzhonghuizhi.com" target="_blank" class="url_main">互联网金融推广</a></li>
+                    <li><a href="http://www.shcwhj.com" target="_blank" class="url_main">上海宠物婚介网</a></li>
+                    <li><a href="http://www.shdog.net" target="_blank" class="url_main">上海狗狗网</a></li>
+                    <li><a href="http://www.pet0513.com" target="_blank" class="url_main">南通宠物网</a></li>
+                    <li><a href="http://www.goumin.com" target="_blank" class="url_main">狗民网</a></li>
+                    <li><a href="http://www.aopets.com" target="_blank" class="url_main">宠物用品</a></li>
+                    <li><a href="http://www.petkoo.com/" target="_blank" class="url_main">宠酷网</a></li>
+                    <li><a href="http://www.muyangquan.com" target="_blank" class="url_main">中国牧羊犬网</a></li>
+                    <li><a href="http://www.5iao.cn" target="_blank" class="url_main">中华藏獒网</a></li>
+                    <li><a href="http://www.petkoo.com" target="_blank" class="url_main">宠酷网</a></li>
+                    <li><a href="http://www.tcbaby.cn" target="_blank" class="url_main">成都天才宠物网</a></li>
+                    <li><a href="http://www.zangao123.com" target="_blank" class="url_main">藏獒</a></li>
+                    <li><a href="http://www.chongwu88.cn" target="_blank" class="url_main">中国宠物医院</a></li>
+                    <li><a href="http://www.bjaichong.com" target="_blank" class="url_main">家宠易康</a></li>
+                    <li><a href="http://www.ao66.com/" target="_blank" class="url_main">中国藏獒网</a></li>
+                    <li><a href="http://www.dogmr.com" target="_blank" class="url_main">宠物美容学校</a></li>
+                    <li><a href="http://www.58.com/zangao" target="_blank" class="url_main">藏獒</a></li>
+                    <li><a href="http://www.ttpet.com" target="_blank" class="url_main">天天宠物网</a></li>
+                    <li><a href="http://www.1dutm.com/" target="_blank" class="url_main">一度藏獒网</a></li>
+                    <li><a href="http://www.zhonghuadubin.com" target="_blank" class="url_main">杜宾犬</a></li>
+                    <li><a href="http://pet.pclady.com.cn/" target="_blank" class="url_main">pclady宠物</a></li>
+                    <li><a href="http://www.maogoupet.cn" target="_blank" class="url_main">猫狗网</a></li>
+                    <li><a href="http://www.pethr.com/" target="_blank" class="url_main">宠物人才网</a></li>
+                    <li><a href="http://www.56pet.com/" target="_blank" class="url_main">56宠物网</a></li>
+                    <li><a href="http://pet.pclady.com.cn/dog/" target="_blank" class="url_main">宠物狗专区</a></li>
+                    <li><a href="http://www.yipets.com" target="_blank" class="url_main">忆宠物摄影工作室</a></li>
+                    <li><a href="http://www.dog126.com/" target="_blank" class="url_main">淘狗网</a></li>
+                    <li><a href="http://sh.58.com/pets.shtml" target="_blank" class="url_main">上海宠物网</a></li>
+                    <li><a href="http://www.diaoshu.net" target="_blank" class="url_main">宠物貂</a></li>
+                    <li><a href="http://sh.58.com/dog/" target="_blank" class="url_main">上海宠物狗</a></li>
+                    <li><a href="http://www.szpet.com" target="_blank" class="url_main">深圳宠物网</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="divider">
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a> </p>
+        <p>copyright@流浪宠物之家 | 邮编：610103 |  管理员电话：18817284020</p>
+    </footer>
+</div>
+<!-- 注册窗口 -->
+<div id="register" class="modal fade" tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h2 class="text-center">注册</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-group" action="">
+                    <div class="form-group">
+                        <label for="name">用户名</label>
+                        <input class="form-control" id="name" type="text" placeholder="6-15位字母或数字">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">密码</label>
+                        <input class="form-control" id="password" type="password" placeholder="至少6位字母或数字">
+                    </div>
+                    <div class="form-group">
+                        <label for="repassword">再次输入密码</label>
+                        <input class="form-control" id="repassword" type="password" placeholder="至少6位字母或数字">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">邮箱</label>
+                        <input class="form-control" id="email" type="email" placeholder="例如:123@123.com">
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary" type="submit">提交</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <a href="" data-toggle="modal" data-dismiss="modal" data-target="#login">已有账号？点我登录</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 登录窗口 -->
+<div id="login" class="modal fade">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+            </div>
+            <div class="modal-title">
+                <h2 class="text-center">登录</h2>
+            </div>
+            <div class="modal-body">
+                <form class="form-group" action="">
+                    <div class="form-group">
+                        <label for="username">用户名</label>
+                        <input class="form-control" id="username" type="text" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="upwd">密码</label>
+                        <input class="form-control" id="upwd" type="password" placeholder="">
+                    </div>
+                    <div class="text-right">
+                        <button class="btn btn-primary" type="submit">登录</button>
+                        <button class="btn btn-danger" data-dismiss="modal">取消</button>
+                    </div>
+                    <a href="" data-toggle="modal" data-dismiss="modal" data-target="#register">还没有账号？点我注册</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- jQuery (Bootstrap 的所有 JavaScript 插件都依赖 jQuery，所以必须放在前边) -->
+<script src="javascripts/jquery-3.3.1.min.js"></script>
+<!-- 加载 Bootstrap 的所有 JavaScript 插件。你也可以根据需要只加载单个插件。 -->
+<script src="javascripts/bootstrap.min.js"></script>
+</body>
+</html>

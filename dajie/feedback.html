@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>大街网</title>
+    <link href="css/navbar.css" rel="stylesheet">
+    <script type="text/javascript" src="js/dropdown.js"></script>
+</head>
+<body>
+<!--导航-->
+<div class="header">
+    <div id="nav">
+        <div class="logo"></div>
+        <!--搜索框-->
+        <div id="search">
+            <form>
+                <div class="group1">
+                    <ul id="u3">
+                        <li id="select1">
+                            <a href="#">
+                                <span class="list2" id="school">校招</span>
+                                <span class="arr" id="arr3"></span>
+                            </a>
+                            <ul id="drop3">
+                                <li onclick="test(this)" id="drop1_1"><a href="#">职位</a></li>
+                                <li onclick="test(this)" id="drop1_2"><a href="#">公司</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="group2">
+                    <input style="outline:none;padding-left:8px; border: 1px solid #00b6d9;border-left: none !important;width: 100%;height: 30px;border-radius: 0px;box-sizing: border-box;margin-bottom: 0px;resize: vertical;" type="text" name="search_text" id="search_text" placeholder="请输入职位名称">
+                </div>
+                <div class="group3">开始搜索</div>
+                <span class="logo1" onclick="f3()"></span>
+            </form>
+        </div>
+        <!--导航栏-->
+        <div id="nav1">
+            <ul id="navigation">
+                <li id="u1">
+                    <a href="#">
+                        <span class="list1" style="width: 60px">职位</span>
+                        <span class="drop" id="arr1"></span>
+                    </a>
+                    <ul id="drop1">
+                        <li><a href="#">AI专区</a></li>
+                        <li><a href="#">全职</a></li>
+                        <li><a href="#">应届生</a></li>
+                        <li><a href="#">兼职</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="list1">海外招聘</span>
+                        <span class="badge_new"></span>
+                    </a>
+                </li>
+                <li><a href="#"><span class="list1">公司</span></a></li>
+                <li>
+                    <a href="#">
+                    <span class="list1">校园</span>
+                    <span class="badge_school">学生</span>
+                </a>
+                </li>
+                <li id="u2" >
+                    <a href="#">
+                        <span class="list1" style="width: 60px">APP</span>
+                        <span class="drop" id="arr2"></span>
+                    </a>
+                    <ul id="drop2">
+                        <li><a href="#">大街APP</a></li>
+                        <li><a href="#">企业版APP</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="btn">
+                <button>登录</button>
+                <button>注册</button>
+            </div>
+            <a href="#">我要招聘</a>
+            <div class="search" onclick="f2()"></div>
+        </div>
+    </div>
+</div>
+
+<div class="container"><br>
+    <!--反馈表单主体-->
+    <div class="context">
+        <div class="c_title">
+            <p><span></span>意见反馈</p>
+        </div>
+        <div class="c_center">
+            <p>感谢使用大街网，你的反馈是对我们最大的鼓励和支持!</p>
+            <form>
+                <label for="subject" style="padding-left: 30px">内容：</label>
+                <textarea id="subject" style="height: 125px" placeholder="请描述遇到的问题或发现的问题（500字以内）。抱歉我们可能无法全部回复，但一定会认真阅读和处理。"></textarea>
+                <br>
+                <label>上传图片：</label>
+                <div class="file-box">
+                    选择文件
+                    <input name="pic" type="file"  class="file-btn" placeholder="选择文件">
+                </div>
+                <span style="font-size: 12px;color: #bbbbbb;padding-top: 10px;float: right;margin-right: 230px">可上传3个文件，每个文件大小不超过2M。</span>
+                <br>
+                <label for="email" style="padding-left: 30px">邮箱：</label>
+                <input style="width: 50%" name="email" type="text" id="email" placeholder="请输入您的邮箱">
+                <br>
+                <input style="margin-left: 70px" name="sub" type="submit" value="提交">
+            </form>
+        </div>
+        <!--联系固定-->
+        <div class="fixed_box">
+            <a href="#nav"><div class="top"></div></a>
+            <a href="#"><div class="info"></div></a>
+        </div>
+    </div>
+
+    <!--脚页-->
+    <div class="footer">
+        <div class="f_text">
+            <span class="f_text1">©2007-2018 大街网 | <a href="#">京ICP备09028813号-1</a> | <img src="images/icon1.png"><a href="#"> 京公网安备11010502035247</a> | 京ICP证090373号</span>
+
+            <span class="f_text1" style="float: right"><a href="#">关于</a> | <a href="#">手机版</a> | <a href="#">职位</a> | <a href="#">行业</a> | <a href="#">渠道招商</a> | <a href="#">意见反馈</a> | <a href="#">服务与声明</a></span>
+        </div>
+        <div class="f_text">
+            <span class="f_text2">北京大杰致远信息技术有限公司 公司地址：北京市朝阳区来广营中街甲一号朝来高科技产业园二期3A#1-3层 联系方式：010-50916789</span>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript">
+    f1("u1","drop1","arr1");
+    f1("u2","drop2","arr2");
+    f1("u3","drop3","arr3");
+</script>
+</body>
+</html>
